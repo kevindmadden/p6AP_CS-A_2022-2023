@@ -75,3 +75,5 @@ fabric.properties
 src/Main.java
 src/Test.java
 src/Main.java
+.idea/*
+.idea/vcs.xml
