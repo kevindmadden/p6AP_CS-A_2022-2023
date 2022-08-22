@@ -39,6 +39,15 @@ public class s02_Variables_TypesAndAssignment {
         final double pi = 3.14;
         //pi = 8.17; //this would give an error because you are trying to change the value of a variable that has been declared final
 
+        //Declare (Creating) Variable
+        int aVariable;
+
+        //Initialize
+        aVariable = 9;
+
+        //Declare and Initialize
+        int anotherVariable = 10;
+
 
     }
 
