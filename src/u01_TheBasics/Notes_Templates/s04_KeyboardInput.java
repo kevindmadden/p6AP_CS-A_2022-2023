@@ -10,9 +10,7 @@ public class s04_KeyboardInput {
         /*
             Retrieve Entire Line (String)
          */
-        System.out.println("Enter message: "); //Ask for user input from keyboard
-            //Store message in variable
-        System.out.println("Retreived message: "); //Print out retreived message
+
 
         /*
             Retrieve next int.
