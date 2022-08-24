@@ -5,7 +5,7 @@
 -Read https://www.programiz.com/java-programming/if-else-statement 
 
 
-<ul><h2>If you have taken a coding class with me before, please do as follows: </h2>
+<ul aria-label="Vehicle Models Available:"><h2>
 
 <li>-Read section 3, including example 4. Read/Skim the rest as needed: https://www.programiz.com/java-programming/if-else-statement </li>
 
