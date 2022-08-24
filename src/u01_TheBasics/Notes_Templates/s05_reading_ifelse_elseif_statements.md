@@ -1,5 +1,5 @@
 <h1>Recommended Reading/Practice</h1>
-Note: Please do the reading in the order listed.
+<em>Note: Please do the reading in the order listed.</em>
 
 
 <h2>If you haven't taken a coding class with me before, please do as follows:</h2>
