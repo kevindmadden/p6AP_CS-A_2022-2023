@@ -5,8 +5,8 @@
 -Read https://www.programiz.com/java-programming/if-else-statement 
 
 
-<h2>If you have taken a coding class with me before, please do as follows: </h2>
-<ul>
+<ul><h2>If you have taken a coding class with me before, please do as follows: </h2>
+
 <li>-Read section 3, including example 4. Read/Skim the rest as needed: https://www.programiz.com/java-programming/if-else-statement </li>
 
 <li>-Note: For if-else statements, java's syntax is almost identical to js. The only major difference is that testing for equality is done with <code>==</code> (java) instead of <code>===</code> (js).</li>
