@@ -3,7 +3,7 @@
 
 
 <h2>If you haven't taken a coding class with me before, please do as follows:</h2>
--Read https://www.programiz.com/java-programming/if-else-statement 
+<ul><li>Read https://www.programiz.com/java-programming/if-else-statement </li></ul>
 
 <h2>If you have taken a coding class with me before, please do as follows: </h2>
 <ul>
