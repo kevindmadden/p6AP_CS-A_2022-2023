@@ -3,7 +3,7 @@ package u01_TheBasics.Notes_Templates;
 import java.util.Scanner;
 
 public class s04_KeyboardInput {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //Create new Scanner to read keyboard input
         Scanner kb = new Scanner(System.in);
 
