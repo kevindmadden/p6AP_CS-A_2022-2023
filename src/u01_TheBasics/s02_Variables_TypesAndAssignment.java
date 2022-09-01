@@ -36,7 +36,7 @@ public class s02_Variables_TypesAndAssignment {
         char c = 'F'; //character - a single character in single quotes / Not on AP test
 
         //Final variables:
-        final double pi = 3.14;
+        final double PI = 3.14;
         //pi = 8.17; //this would give an error because you are trying to change the value of a variable that has been declared final
 
         //Declare (Creating) Variable
