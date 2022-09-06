@@ -1,18 +1,24 @@
 package u02_IntroToGraphics;
 
-public class s03_FirstAnimation {
+public class s04_BouncingAnimation {
 
     public static void main(String[] args) {
         StdDraw.setScale(0, 100);
         StdDraw.enableDoubleBuffering(); //Calling this method stops things from being drawn immediately after a draw method is called. This allows you to call many different draw methods without anything being drawn on the screen; when you call StdDraw.show(), everything will be drawn at once.
 
         double xPos = 10; //px
-        double xVel = 20; // px/sec
+        double xVel = 80; // px/sec
 
         double timeElapsed = 0.017; //0.017 seconds-- this is how long each frame of our animation appears.
         while (true) {
             xPos = xPos + xVel*timeElapsed;
             System.out.println(xPos);
+            if(xPos > 100-5){
+                xVel = Math.abs(xVel)*-1;
+            }
+            if(xPos < 0+5){
+                xVel = Math.abs(xVel);
+            }
 
             StdDraw.square(xPos, 50, 5);
 
