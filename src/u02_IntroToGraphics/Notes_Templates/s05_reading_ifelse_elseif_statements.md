@@ -5,7 +5,7 @@ Within the AP CS-A course and exam description, this aligns with 3.5-6.
 <h1>Main Resources</h1>
 Please complete <code>(1 || 2) && 3</code>.
 <ol>
-Read and do the exercises: https://runestone.academy/ns/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html
+<li>Read and do the exercises: https://runestone.academy/ns/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html</li>
 <li>Read and do the exercsies in class text: 3.10 <em>(Note that there is nothing on the AP test about the XOR [^] logical operator.)</em></li>
 <li>Play the game: https://booleangame.com/ (try to get a score of at least 30 points)</li>
 </ol>
