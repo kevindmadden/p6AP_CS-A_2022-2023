@@ -1,5 +1,7 @@
 <h1>Recommended Resources</h1>
-Main topics covered: Logical Operators, Truth Tables, Short-Circuit, DeMorgan's. Within the AP CS-A course and exam description, this aligns with 3.5-6.  
+Main topics covered: Logical Operators, Truth Tables, Short-Circuit, DeMorgan's.
+
+Within the AP CS-A course and exam description, this aligns with 3.5-6.  
 <h1>Main Resources</h1>
 Please complete <code>(1 || 2) && 3</code>.
 <ol>
