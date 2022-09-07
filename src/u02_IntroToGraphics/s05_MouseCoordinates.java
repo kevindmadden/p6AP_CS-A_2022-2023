@@ -1,9 +1,11 @@
 package u02_IntroToGraphics;
 /*
-    Compound boolean expressions.
+    Use compound boolean expressions.
     && - and
     || - or
      ! - not
+
+     Reading: 3.10
  */
 
 public class s05_MouseCoordinates {
