@@ -12,7 +12,7 @@ public class s04_BouncingAnimation {
         double timeElapsed = 0.017; //0.017 seconds-- this is how long each frame of our animation appears.
         while (true) {
             xPos = xPos + xVel*timeElapsed;
-            System.out.println(xPos);
+            //System.out.println(xPos);
             if(xPos > 100-5){
                 xVel = Math.abs(xVel)*-1;
             }

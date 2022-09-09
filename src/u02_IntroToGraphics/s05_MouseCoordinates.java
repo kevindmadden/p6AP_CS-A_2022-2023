@@ -14,9 +14,17 @@ public class s05_MouseCoordinates {
         StdDraw.setScale(0, 100);
         StdDraw.enableDoubleBuffering(); //Calling this method stops things from being drawn immediately after a draw method is called. This allows you to call many different draw methods without anything being drawn on the screen; when you call StdDraw.show(), everything will be drawn at once.
 
+        double xPosSq1 = 50;
+        double yPosSq1 = 50;
+        double halfWidthSq1 = 10;
+        double xVelSq1 = 30;
+        double yVelSq1 = 10;
+
 
         double timeElapsed = 0.017; //0.017 seconds-- this is how long each frame of our animation appears.
         while (true) {
+            xPosSq1 = xPosSq1 + xVelSq1*timeElapsed;
+            yPosSq1 = yPosSq1 + yVelSq1*timeElapsed;
 
             double mouseX = StdDraw.mouseX(); //this method **returns** the x-coordinate
             double mouseY = StdDraw.mouseY();
@@ -28,7 +36,7 @@ public class s05_MouseCoordinates {
                 }
             }*/
 
-            if(mouseX > 45 && mouseX < 55 && mouseY < 55 && mouseY>45){
+            if(isMouseInSquare(xPosSq1,yPosSq1,halfWidthSq1)){
                 System.out.println("in square");
                 StdDraw.setPenColor(StdDraw.RED);
             }else{
@@ -40,7 +48,7 @@ public class s05_MouseCoordinates {
             }
 
 
-            StdDraw.square(50,50,5);
+            StdDraw.square(xPosSq1,yPosSq1,halfWidthSq1);
 
 
 
@@ -49,4 +57,20 @@ public class s05_MouseCoordinates {
             StdDraw.clear(); //This clears everything drawn on the screen. You must redraw the image you wish to display for each frame of an animation
         }
     }
+
+    public static boolean isMouseInSquare(double xCenter, double yCenter, double halfWidth){
+        double xCoordOfLeftSide = xCenter-halfWidth;
+        double xCoordOfRightSide = xCenter+halfWidth;
+        double yCoordOfTopSide = yCenter+halfWidth;
+        double yCoordOfBottomSide = yCenter-halfWidth;
+
+        double mouseX = StdDraw.mouseX();
+        double mouseY = StdDraw.mouseY();
+
+        if(mouseX > xCoordOfLeftSide && mouseX < xCoordOfRightSide && mouseY > yCoordOfBottomSide && mouseY < yCoordOfTopSide){
+            return true;
+        }
+        return false;
+    }
+
 }
