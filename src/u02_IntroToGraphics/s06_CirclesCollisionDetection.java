@@ -1,6 +1,6 @@
 package u02_IntroToGraphics;
 
-public class s06_CollisionDetection {
+public class s06_CirclesCollisionDetection {
 
     public static void main(String[] args) {
         StdDraw.setScale(0, 100);
