@@ -24,7 +24,6 @@ public class BouncingCircle {
     }
 
 
-
     public void draw(){
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.filledCircle(xPos, yPos, radius);
@@ -35,6 +34,19 @@ public class BouncingCircle {
         xPos = xPos + xVel*timeElapsed;
         yPos = yPos + yVel*timeElapsed;
 
+        if(xPos < 0+radius){
+            xVel = Math.abs(xVel);
+        }
+        if(xPos > 100-radius){
+            xVel = -Math.abs(xVel);
+        }
+        if(yPos < 0+radius){
+            yVel = Math.abs(yVel);
+        }
+        if(yPos > 100-radius){
+            yVel = -Math.abs(yVel);
+        }
+        
     }
 
 }
