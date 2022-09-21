@@ -1,11 +1,12 @@
 package u03_ObjectsAndClasses;
 
 public class BouncingCircle {
-    public double xPos;
-    public double yPos;
-    public double radius;
-    public double xVel;
-    public double yVel;
+    //instance variables
+    private double xPos;
+    private double yPos;
+    private double radius;
+    private double xVel;
+    private double yVel;
 
     public BouncingCircle(double xPos, double yPos, double radius, double xVel, double yVel){
         this.xPos = xPos;
@@ -47,6 +48,14 @@ public class BouncingCircle {
             yVel = -Math.abs(yVel);
         }
         
+    }
+
+    public void setXPos(double xPos){
+        this.xPos = xPos;
+    }
+
+    public double getSetXPos(){
+        return this.xPos;
     }
 
 }

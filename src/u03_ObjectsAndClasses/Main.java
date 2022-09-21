@@ -7,6 +7,11 @@ public class Main {
         StdDraw.enableDoubleBuffering(); //Calling this method stops things from being drawn immediately after a draw method is called. This allows you to call many different draw methods without anything being drawn on the screen; when you call StdDraw.show(), everything will be drawn at once.
 
         BouncingCircle circle1 = new BouncingCircle(20, 20, 5, 20, 20);
+        circle1.xPos = 25;
+        circle1.setXPos(25);
+        System.out.println(circle1.xPos);
+        System.out.println(circle1.getSetXPos());
+
         BouncingCircle circle2 = new BouncingCircle(40, 40, 7, 20, 20);
         BouncingCircle circle3 = new BouncingCircle(80, 40, 7, 100, 20);
 
