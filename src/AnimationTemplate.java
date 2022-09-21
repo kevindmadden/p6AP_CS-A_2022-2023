@@ -15,7 +15,9 @@ public class AnimationTemplate {
         }
     }
 
-    public static boolean didCirlecRectColl(double rect_x, double rect_y, double rect_w, double rect_h, double circle_x, double circle_y, double circle_r) {
+    public static boolean didCirlecRectColl(double rect_x, double rect_y, double rect_halfWidth, double rect_halfHeight, double circle_x, double circle_y, double circle_r) {
+        double rect_w = rect_halfWidth*2;
+        double rect_h = rect_halfHeight*2;
         double distX = Math.abs(circle_x - rect_x - rect_w / 2);
         double distY = Math.abs(circle_y - rect_y - rect_h / 2);
 
