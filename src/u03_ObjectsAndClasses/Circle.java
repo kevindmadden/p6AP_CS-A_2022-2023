@@ -1,6 +1,6 @@
 package u03_ObjectsAndClasses;
 
-public class BouncingCircle {
+public class Circle {
     //instance variables
     private double xPos;
     private double yPos;
@@ -8,7 +8,7 @@ public class BouncingCircle {
     private double xVel;
     private double yVel;
 
-    public BouncingCircle(double xPos, double yPos, double radius, double xVel, double yVel){
+    public Circle(double xPos, double yPos, double radius, double xVel, double yVel){
         this.xPos = xPos;
         this.yPos = yPos;
         this.radius = radius;
@@ -16,17 +16,7 @@ public class BouncingCircle {
         this.yVel = yVel;
     }
 
-    public BouncingCircle(){
-        xPos = 50;
-        yPos = 50;
-        radius = 5;
-        xVel = 10;
-        yVel = 10;
-    }
-
-
     public void draw(){
-        StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.filledCircle(xPos, yPos, radius);
     }
 
@@ -56,6 +46,23 @@ public class BouncingCircle {
 
     public double getSetXPos(){
         return this.xPos;
+    }
+
+    public static boolean areCirclesColliding(Circle circle1, Circle circle2){
+        //System.out.println("circle1: "+circle1.xPos+", "+circle1.yPos);
+        //System.out.println("circle2: "+circle2.xPos+", "+circle2.yPos);
+        double x1 = circle1.xPos;
+        double y1 = circle1.yPos;
+        double r1 = circle1.radius;
+        double x2 = circle2.xPos;
+        double y2 = circle2.yPos;
+        double r2 = circle2.radius;
+
+        //double x1, double y1, double r1, double x2, double y2, double r2
+        if(Math.sqrt( Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2) ) < r1 + r2 ){
+            return true;
+        }
+        return false;
     }
 
 }

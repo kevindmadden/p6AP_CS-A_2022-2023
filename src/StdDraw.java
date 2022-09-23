@@ -25,19 +25,53 @@
  *
  ******************************************************************************/
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.FileDialog;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.RenderingHints;
+import java.awt.Toolkit;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import java.awt.geom.Arc2D;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.GeneralPath;
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D;
+
 import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.IOException;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import java.util.LinkedList;
-import java.util.NoSuchElementException;
 import java.util.TreeSet;
+import java.util.NoSuchElementException;
+import javax.imageio.ImageIO;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
 
 /**
  *  <p><b>Overview.</b>
@@ -454,7 +488,7 @@ import java.util.TreeSet;
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
+ final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
     /**
      *  The color black.
@@ -710,7 +744,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         menuItem1.addActionListener(std);
         // Java 10+: replace getMenuShortcutKeyMask() with getMenuShortcutKeyMaskEx()
         menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
-                Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         menu.add(menuItem1);
         return menuBar;
     }
@@ -2082,3 +2116,4 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 }
+
