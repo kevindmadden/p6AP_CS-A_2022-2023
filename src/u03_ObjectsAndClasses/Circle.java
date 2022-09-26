@@ -37,7 +37,6 @@ public class Circle {
         if(yPos > 100-radius){
             yVel = -Math.abs(yVel);
         }
-        
     }
 
     public void setXPos(double xPos){
@@ -46,6 +45,20 @@ public class Circle {
 
     public double getSetXPos(){
         return this.xPos;
+    }
+
+    public boolean areCirclesColliding(Circle circle2){
+        double x1 = xPos;
+        double y1 = yPos;
+        double r1 = radius;
+        double x2 = circle2.xPos;
+        double y2 = circle2.yPos;
+        double r2 = circle2.radius;
+
+        if(Math.sqrt( Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2) ) < r1 + r2 ){
+            return true;
+        }
+        return false;
     }
 
     public static boolean areCirclesColliding(Circle circle1, Circle circle2){
@@ -58,11 +71,9 @@ public class Circle {
         double y2 = circle2.yPos;
         double r2 = circle2.radius;
 
-        //double x1, double y1, double r1, double x2, double y2, double r2
         if(Math.sqrt( Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2) ) < r1 + r2 ){
             return true;
         }
         return false;
     }
-
 }
