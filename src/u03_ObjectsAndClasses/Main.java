@@ -19,12 +19,12 @@ public class Main {
             bagel.draw();
             basketBall.draw();
 
-            /*
-            All of these method calls accomplish the exact same thing:
+
+            //All of these method calls accomplish the exact same thing:
                 bagel.areCirclesColliding(basketBall); //non-static
                 basketBall.areCirclesColliding(bagel); //non-static
                 Circle.areCirclesColliding(bagel, basketBall); //static
-             */
+
 
 
 
