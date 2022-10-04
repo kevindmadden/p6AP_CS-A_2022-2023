@@ -27,5 +27,5 @@ Print the numbers 0 through 10.
     System.out.print(i+", ");
 } </code></pre>
 <li>Rewrite the block of code given in the previous "exercise" so that it uses  <code>&#62</code> instead of <code>&#62=</code>.</li>
-<li>Print the numbers 15 through 90 in reverse-order. So 90, 88, 86, ..., 2, 15.</li>
+<li>Print the numbers 16 through 90 in reverse-order. So 90, 88, 86, ..., 16.</li>
 </ol>
