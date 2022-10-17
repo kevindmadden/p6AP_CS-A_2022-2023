@@ -16,6 +16,14 @@ public class Main {
             StdDraw.setPenColor(StdDraw.BLACK);
             StdDraw.filledSquare(50,50,50);
 
+            /*
+            for(int i=0; i<100; i++){
+                snowflakes[i].calculate(timeElapsed);
+                snowflakes[i].draw();
+            }
+            The above for-loop is equivalent to the below for-each loop.
+             */
+
             for(Snowflake snowflake : snowflakes){
                 snowflake.calculate(timeElapsed);
                 snowflake.draw();
