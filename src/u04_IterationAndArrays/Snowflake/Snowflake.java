@@ -5,14 +5,13 @@ public class Snowflake {
     private double yPos;
     private double yVel;
 
-    public Snowflake(){
-        yVel = -20;
-        xPos = Math.random()*100;
-        yPos = 100;
-    }
+    private static int totalNumOfSnowflakes;
 
-    public void calculate(double timeElapsed){
-        yPos = yPos + yVel*timeElapsed;
+
+    public Snowflake(){
+        xPos = Math.random()*100;
+        yPos = Math.random()*100+100;
+        yVel = -1*(Math.random()*80+40);
     }
 
     public void draw(){
@@ -20,4 +19,18 @@ public class Snowflake {
         StdDraw.filledCircle(xPos, yPos, 1);
     }
 
+    public void calculate(double timeElapsed){
+        yPos = yPos + yVel*timeElapsed;
+        if(yPos < -5){
+            xPos = Math.random()*100;
+            yPos = 105;
+            yVel = -1*(Math.random()*80+40);
+            totalNumOfSnowflakes++;
+        }
+    }
+
+    public static void drawSnowOnGround(){
+        StdDraw.setPenColor(StdDraw.WHITE);
+        StdDraw.filledRectangle(50, 0, 50, totalNumOfSnowflakes);
+    }
 }

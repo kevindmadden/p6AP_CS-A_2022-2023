@@ -6,8 +6,8 @@ public class Main {
         StdDraw.setScale(0, 100);
         StdDraw.enableDoubleBuffering(); //Calling this method stops things from being drawn immediately after a draw method is called. This allows you to call many different draw methods without anything being drawn on the screen; when you call StdDraw.show(), everything will be drawn at once.
 
-        Snowflake[] snowflakes = new Snowflake[100];
-        for(int i=0; i<100; i++){
+        Snowflake[] snowflakes = new Snowflake[5];
+        for(int i=0; i< snowflakes.length; i++){
             snowflakes[i] = new Snowflake();
         }
 
@@ -16,18 +16,12 @@ public class Main {
             StdDraw.setPenColor(StdDraw.BLACK);
             StdDraw.filledSquare(50,50,50);
 
-            /*
-            for(int i=0; i<100; i++){
-                snowflakes[i].calculate(timeElapsed);
-                snowflakes[i].draw();
-            }
-            The above for-loop is equivalent to the below for-each loop.
-             */
 
             for(Snowflake snowflake : snowflakes){
                 snowflake.calculate(timeElapsed);
                 snowflake.draw();
             }
+            Snowflake.drawSnowOnGround();
 
             StdDraw.show(); //Because we have called StdDraw.enableDoubleBuffering(), everything that you draw up until this point will be loaded into java's memory but not actually drawn. Calling StdDraw.draw() then draws everything at once that is loaded into java's memory.
             StdDraw.pause((int) (timeElapsed * 1000)); //You must pass to the pause method the number of milliseconds to pause for; so we multiply by 1000 because our timeElapsed variable is in seconds, not milliseconds.
