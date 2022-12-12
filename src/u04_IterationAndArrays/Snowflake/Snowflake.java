@@ -8,6 +8,7 @@ public class Snowflake {
     private static int totalNumOfSnowflakes;
 
 
+
     public Snowflake(){
         xPos = Math.random()*100;
         yPos = Math.random()*100+100;
