@@ -1,5 +1,7 @@
 package u05_Checkers;
 
+import java.awt.*;
+
 public class Checker {
     private int playerNum;
     private boolean isKing;
@@ -10,8 +12,13 @@ public class Checker {
     }
 
     public void draw(int row, int col){
-        StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.filledCircle(5+10*col,75-10*row, 4.5);
+        if(playerNum==1){
+            StdDraw.setPenColor(new Color(0, 0, 0));
+        }else{
+            StdDraw.setPenColor(new Color(218, 21, 21));
+        }
+
+        StdDraw.filledCircle(5+10*col,75-10*row, 4);
 
     }
 }

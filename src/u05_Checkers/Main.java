@@ -46,8 +46,34 @@ public class Main {
             }
         }
 
-        Checker checker1 = new Checker(1);
-        board[0][0].setChecker(checker1);
+        //Initial Starting points for player 1 checkers
+        board[0][0].setChecker(new Checker(1));
+        board[0][2].setChecker(new Checker(1));
+        board[0][4].setChecker(new Checker(1));
+        board[0][6].setChecker(new Checker(1));
+        board[2][0].setChecker(new Checker(1));
+        board[2][2].setChecker(new Checker(1));
+        board[2][4].setChecker(new Checker(1));
+        board[2][6].setChecker(new Checker(1));
+        board[1][1].setChecker(new Checker(1));
+        board[1][3].setChecker(new Checker(1));
+        board[1][5].setChecker(new Checker(1));
+        board[1][7].setChecker(new Checker(1));
+
+        //Player 2
+        board[5][1].setChecker(new Checker(2));
+        board[5][3].setChecker(new Checker(2));
+        board[5][5].setChecker(new Checker(2));
+        board[5][7].setChecker(new Checker(2));
+        board[7][1].setChecker(new Checker(2));
+        board[7][3].setChecker(new Checker(2));
+        board[7][5].setChecker(new Checker(2));
+        board[7][7].setChecker(new Checker(2));
+        board[6][0].setChecker(new Checker(2));
+        board[6][2].setChecker(new Checker(2));
+        board[6][4].setChecker(new Checker(2));
+        board[6][6].setChecker(new Checker(2));
+
 
 
                 StdDraw.setScale(0, 80);
@@ -59,7 +85,7 @@ public class Main {
         while (true) {
 
             //Draw red bg
-            StdDraw.setPenColor(new Color(115, 9, 9));
+            StdDraw.setPenColor(new Color(93, 7, 7));
             StdDraw.filledSquare(40,40,40);
 
             for(int row=0; row<8; row++){

@@ -15,6 +15,10 @@ public class BoardSpace {
         this.checker = checker;
     }
 
+    public Checker getChecker(){
+        return this.checker;
+    }
+
 
 
 
@@ -30,9 +34,9 @@ public class BoardSpace {
         // [2][0]: ( 5,55)
 
         if((row+col)%2==0){
-            StdDraw.setPenColor(new Color(245, 223, 135));
+            StdDraw.setPenColor(new Color(255, 243, 203));
         }else{
-            StdDraw.setPenColor(new Color(68, 3, 3));
+            StdDraw.setPenColor(new Color(66, 5, 5));
         }
 
         StdDraw.filledSquare(5+10*col,75-10*row,5);
