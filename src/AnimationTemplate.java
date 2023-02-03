@@ -9,11 +9,21 @@ public class AnimationTemplate {
         while (true) {
 
 
+
             StdDraw.show(); //Because we have called StdDraw.enableDoubleBuffering(), everything that you draw up until this point will be loaded into java's memory but not actually drawn. Calling StdDraw.draw() then draws everything at once that is loaded into java's memory.
             StdDraw.pause((int) (timeElapsed * 1000)); //You must pass to the pause method the number of milliseconds to pause for; so we multiply by 1000 because our timeElapsed variable is in seconds, not milliseconds.
             StdDraw.clear(); //This clears everything drawn on the screen. You must redraw the image you wish to display for each frame of an animation
         }
     }
+
+    public boolean isPointInSquare(double xPoint, double yPoint, double xCenter, double yCenter, double length){
+        if(xPoint > xCenter+length/2.0 || xPoint < xCenter-length/2.0 ||
+                yPoint > yCenter+length/2.0 || yPoint < yCenter-length/2.0){
+            return false;
+        }
+        return true;
+    }
+
 
     public static boolean didCirlecRectColl(double rect_x, double rect_y, double rect_halfWidth, double rect_halfHeight, double circle_x, double circle_y, double circle_r) {
         rect_x = rect_x - rect_halfWidth;

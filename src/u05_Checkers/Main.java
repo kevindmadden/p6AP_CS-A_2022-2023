@@ -80,9 +80,25 @@ public class Main {
         StdDraw.enableDoubleBuffering(); //Calling this method stops things from being drawn immediately after a draw method is called. This allows you to call many different draw methods without anything being drawn on the screen; when you call StdDraw.show(), everything will be drawn at once.
 
 
+        boolean isMousePressed = false;
+
 
         double timeElapsed = 0.017; //0.017 seconds-- this is how long each frame of our animation appears.
         while (true) {
+            if(StdDraw.isMousePressed()){
+                isMousePressed = true;
+            }
+
+            for(int row=0; row<8; row++){
+                for(int col=0; col<8; col++){
+                    if(isMousePressed && isPointInSquare(StdDraw.mouseX(), StdDraw.mouseY(),5+10*col,75-10*row,5)){
+                        board[row][col].setIsHighlighted(true);
+                        isMousePressed = false;
+                    }
+                }
+            }
+
+            System.out.println(StdDraw.mouseX()+","+ StdDraw.mouseY());
 
             //Draw red bg
             StdDraw.setPenColor(new Color(93, 7, 7));
@@ -101,6 +117,13 @@ public class Main {
         }
 
 
+    }
+    public static boolean isPointInSquare(double xPoint, double yPoint, double xCenter, double yCenter, double length){
+        if(xPoint > xCenter+length/2.0 || xPoint < xCenter-length/2.0 ||
+                yPoint > yCenter+length/2.0 || yPoint < yCenter-length/2.0){
+            return false;
+        }
+        return true;
     }
 
 }

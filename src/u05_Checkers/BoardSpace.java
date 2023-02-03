@@ -19,11 +19,14 @@ public class BoardSpace {
         return this.checker;
     }
 
+    public void setIsHighlighted(boolean isHighlighted){
+        this.isHighlighted = isHighlighted;
+    }
 
 
 
     public void draw(int row, int col){
-        //y-coord: 80-5-10*row
+        /*y-coord: 80-5-10*row
         //x-coord: 0+5+10&col
         // [row][col]: (5+10*col,75-10*row)
         // [0][0]: ( 5,75)
@@ -31,7 +34,7 @@ public class BoardSpace {
         // [0][2]: (25,75)
         // [0][0]: ( 5,75)
         // [1][0]: ( 5,65)
-        // [2][0]: ( 5,55)
+        // [2][0]: ( 5,55)*/
 
         if((row+col)%2==0){
             StdDraw.setPenColor(new Color(255, 243, 203));
@@ -40,6 +43,12 @@ public class BoardSpace {
         }
 
         StdDraw.filledSquare(5+10*col,75-10*row,5);
+        StdDraw.setPenColor(new Color(218, 215, 28));
+        StdDraw.setPenRadius(.008);
+        if(isHighlighted){
+            StdDraw.square(5+10*col,75-10*row,5);
+        }
+
 
         if(this.checker != null){
             checker.draw(row, col);
