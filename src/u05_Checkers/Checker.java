@@ -17,8 +17,14 @@ public class Checker {
         }else{
             StdDraw.setPenColor(new Color(218, 21, 21));
         }
-
         StdDraw.filledCircle(5+10*col,75-10*row, 4);
+        if(isHighlighted){
+            StdDraw.setPenColor(StdDraw.YELLOW);
+            StdDraw.circle(5+10*col,75-10*row, 4);
+        }
+    }
 
+    public void setIsHighlighted(boolean isHighlighted){
+        this.isHighlighted = isHighlighted;
     }
 }

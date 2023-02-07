@@ -89,16 +89,33 @@ public class Main {
                 isMousePressed = true;
             }
 
+            //TODO: Clicking somewhere else unhighlights checker/squares
+            for(int row=0; row<8; row++) {
+                for (int col = 0; col < 8; col++) {
+
+                }
+            }
+
             for(int row=0; row<8; row++){
                 for(int col=0; col<8; col++){
-                    if(isMousePressed && isPointInSquare(StdDraw.mouseX(), StdDraw.mouseY(),5+10*col,75-10*row,5)){
-                        board[row][col].setIsHighlighted(true);
+                    if(isMousePressed && isPointInSquare(StdDraw.mouseX(), StdDraw.mouseY(),5+10*col,75-10*row,10)){
+                        Checker tempChecker = board[row][col].getChecker();
+                       if(tempChecker != null){
+                           tempChecker.setIsHighlighted(true);
+                           //Up-right
+                           if(col+1<8 && board[row-1][col+1].getChecker()==null){
+                               board[row-1][col+1].setIsHighlighted(true);
+                           }
+                           //Up-left
+                           if(col-1>=0 && board[row-1][col-1].getChecker()==null){
+                               board[row-1][col-1].setIsHighlighted(true);
+                           }
+
+                       }
                         isMousePressed = false;
                     }
                 }
             }
-
-            System.out.println(StdDraw.mouseX()+","+ StdDraw.mouseY());
 
             //Draw red bg
             StdDraw.setPenColor(new Color(93, 7, 7));
