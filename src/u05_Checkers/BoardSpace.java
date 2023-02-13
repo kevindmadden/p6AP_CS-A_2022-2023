@@ -23,6 +23,9 @@ public class BoardSpace {
         this.isHighlighted = isHighlighted;
     }
 
+    public boolean getIsHighlighted(){
+        return isHighlighted;
+    }
 
 
     public void draw(int row, int col){
@@ -53,7 +56,5 @@ public class BoardSpace {
         if(this.checker != null){
             checker.draw(row, col);
         }
-
-        //StdDraw.filled
     }
 }

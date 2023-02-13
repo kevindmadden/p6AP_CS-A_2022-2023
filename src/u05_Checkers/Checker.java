@@ -24,6 +24,10 @@ public class Checker {
         }
     }
 
+    public int getPlayerNum(){
+        return playerNum;
+    }
+
     public void setIsHighlighted(boolean isHighlighted){
         this.isHighlighted = isHighlighted;
     }
