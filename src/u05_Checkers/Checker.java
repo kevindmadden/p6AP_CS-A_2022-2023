@@ -28,6 +28,11 @@ public class Checker {
         return playerNum;
     }
 
+    public boolean getIsHighlighted(){
+        return isHighlighted;
+    }
+
+
     public void setIsHighlighted(boolean isHighlighted){
         this.isHighlighted = isHighlighted;
     }

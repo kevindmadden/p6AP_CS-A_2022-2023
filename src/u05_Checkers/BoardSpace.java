@@ -11,6 +11,10 @@ public class BoardSpace {
         isHighlighted = false;
     }
 
+    public void removeChecker(){
+        checker = null;
+    }
+
     public void setChecker(Checker checker){
         this.checker = checker;
     }

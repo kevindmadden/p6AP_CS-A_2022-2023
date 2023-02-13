@@ -96,7 +96,6 @@ public class Main {
 
             int mouseRowNum = (int)(7.999-StdDraw.mouseY()/10);
             int mouseColNum = (int)(StdDraw.mouseX()/10);
-            System.out.println(mouseRowNum+","+mouseColNum);
 
             //we clicked on checker
             if(wasMouseUnpressed && board[mouseRowNum][mouseColNum].getChecker()!=null){
@@ -116,8 +115,22 @@ public class Main {
                 board[mouseRowNum][mouseColNum].getChecker().setIsHighlighted(true);
 
             }else if(wasMouseUnpressed && board[mouseRowNum][mouseColNum].getChecker()==null){ //we didn't click on checker
-                unhighlightEverything(board);
+                if(board[mouseRowNum][mouseColNum].getIsHighlighted()){ //we clicked on highlighted space
+                    for(int row=0; row<8; row++){
+                        for(int col=0; col<8; col++){
+                            Checker tempChecker = board[row][col].getChecker();
+                            //if a checker exists at this board space and the checker is highlighted, we want to remove that checker from the board.
+                            if(tempChecker != null && tempChecker.getIsHighlighted()){
+                                board[row][col].removeChecker();
+                                board[mouseRowNum][mouseColNum].setChecker(tempChecker);
+                            }
+                        }
+                    }
 
+
+                }
+
+                unhighlightEverything(board);
             }
 
 
