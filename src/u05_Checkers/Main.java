@@ -103,14 +103,25 @@ public class Main {
 
                 Checker clickedChecker = board[mouseRowNum][mouseColNum].getChecker();
 
+                /* Highlighting possible board spaces to move to */
                 BoardSpace upRight = board[mouseRowNum-1][mouseColNum+1];
                 if(upRight.getChecker() == null && clickedChecker.getPlayerNum()==2){
-                    board[mouseRowNum-1][mouseColNum+1].setIsHighlighted(true);
+                    upRight.setIsHighlighted(true);
                 }
                 BoardSpace upLeft = board[mouseRowNum-1][mouseColNum-1];
                 if(upLeft.getChecker() == null && clickedChecker.getPlayerNum()==2){
-                    board[mouseRowNum-1][mouseColNum-1].setIsHighlighted(true);
+                    upLeft.setIsHighlighted(true);
                 }
+                BoardSpace downRight = board[mouseRowNum+1][mouseColNum+1];
+                if(downRight.getChecker() == null && clickedChecker.getPlayerNum()==1){
+                    downRight.setIsHighlighted(true);
+                }
+                BoardSpace downLeft = board[mouseRowNum+1][mouseColNum-1];
+                if(downLeft.getChecker() == null && clickedChecker.getPlayerNum()==1){
+                    downLeft.setIsHighlighted(true);
+                }
+
+
 
                 board[mouseRowNum][mouseColNum].getChecker().setIsHighlighted(true);
 
